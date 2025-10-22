@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 22 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 197 71% 73%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 197 71% 95%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 197 71% 73%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 197 71% 85%;
+    --input: 197 71% 90%;
+    --ring: 22 100% 50%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 0 0% 96%;
+    --card: 222 84% 8%;
+    --card-foreground: 0 0% 96%;
+    --popover: 222 84% 8%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 22 100% 55%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 197 71% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 197 71% 15%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 22 100% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 22 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient backgrounds */
+.gradient-orange {
+  background: linear-gradient(135deg, #FF7A00 0%, #FF9E40 100%);
+}
+
+.gradient-orange-dark {
+  background: linear-gradient(135deg, #FF8A3C 0%, #FF7A00 100%);
+}
+
+/* Glassmorphism effects */
+.glass-light {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+  background: rgba(13, 13, 13, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 138, 60, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(255, 138, 60, 0.2);
+}
+
+/* Glow effects */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.3);
+}
+
+.glow-orange-dark {
+  box-shadow: 0 0 20px rgba(255, 138, 60, 0.4);
+}
